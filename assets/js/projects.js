@@ -37,9 +37,9 @@ var projects = [
         html += '' +
             '<article class="project-card reveal">' +
                 (p.image
-                    ? '<div class="project-card__image">' +
+                    ? '<a href="' + (p.url || '#') + '" target="_blank" rel="noopener noreferrer" class="project-card__image">' +
                         '<img src="' + p.image + '" alt="' + p.title + '" loading="lazy">' +
-                      '</div>'
+                      '</a>'
                     : '') +
                 '<div class="project-card__header">' +
                     '<h3 class="project-card__title">' + p.title + '</h3>' +

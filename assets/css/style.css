@@ -583,6 +583,7 @@ p + p { margin-top: var(--space-sm); }
     box-shadow: 0 12px 40px rgba(0,0,0,0.3);
 }
 
+a.project-card__image,
 .project-card__image {
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -591,6 +592,7 @@ p + p { margin-top: var(--space-sm); }
     align-items: center;
     justify-content: center;
     background: #1e1e24;
+    cursor: pointer;
 }
 .project-card__image img {
     width: 40%;
