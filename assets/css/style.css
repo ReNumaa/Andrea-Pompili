@@ -369,7 +369,7 @@ p + p { margin-top: var(--space-sm); }
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    gap: var(--space-lg);
+    gap: var(--space-md);
     text-align: center;
 }
 
@@ -384,7 +384,7 @@ p + p { margin-top: var(--space-sm); }
     font-size: 0.95rem;
     color: var(--sage-soft);
     max-width: 520px;
-    margin: 0 auto var(--space-lg);
+    margin: 0 auto var(--space-md);
     line-height: 1.65;
 }
 
