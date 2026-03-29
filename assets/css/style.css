@@ -369,7 +369,7 @@ p + p { margin-top: var(--space-sm); }
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    gap: var(--space-md);
+    gap: var(--space-sm);
     text-align: center;
 }
 
@@ -377,7 +377,7 @@ p + p { margin-top: var(--space-sm); }
     font-family: var(--font-display);
     font-size: 1.4rem;
     line-height: 1.25;
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-xs);
 }
 
 .hero__subtitle {
