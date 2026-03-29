@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://andreapompili.com/sitemap.xml

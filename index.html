@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrea Pompili — Siti web e strumenti digitali su misura</title>
+    <meta name="description" content="Realizzo siti web, web app e strumenti digitali su misura per professionisti e piccole imprese. Automazione, gestionali, sistemi di prenotazione — tutto costruito sulle tue esigenze reali.">
+    <meta property="og:title" content="Andrea Pompili — Siti web e strumenti digitali su misura">
+    <meta property="og:description" content="Strumenti digitali su misura per professionisti e piccole imprese. Automazione, gestionali, prenotazioni.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/img/andrea.png">
+    <meta name="theme-color" content="#1A1A1E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Vai al contenuto</a>
+
+    <!-- ═══════════════════════════════════════════
+         NAVIGAZIONE
+    ═══════════════════════════════════════════ -->
+    <header class="site-header" id="site-header">
+        <nav class="nav container">
+            <a href="#hero" class="nav__logo">Andrea<span>Pompili</span></a>
+            <!-- Desktop nav (hidden on mobile via CSS) -->
+            <ul class="nav__desktop" id="nav-desktop">
+                <li><a href="#chi-sono">Chi sono</a></li>
+                <li><a href="#servizi">Servizi</a></li>
+                <li><a href="#progetti">Progetti</a></li>
+                <li><a href="blog/">Blog</a></li>
+                <li><a href="#contatti" class="nav__cta">Contattami</a></li>
+            </ul>
+            <button class="nav__toggle" id="nav-toggle" aria-label="Apri menu" aria-expanded="false">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile overlay nav — fuori dal header per evitare stacking context issues -->
+    <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+        <button class="mobile-nav__close" id="mobile-nav-close" aria-label="Chiudi menu">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <nav class="mobile-nav__inner">
+            <a href="#chi-sono">Chi sono</a>
+            <a href="#servizi">Servizi</a>
+            <a href="#progetti">Progetti</a>
+            <a href="blog/">Blog</a>
+            <a href="#contatti" class="mobile-nav__cta">Contattami</a>
+        </nav>
+    </div>
+
+    <main id="main-content">
+
+        <!-- ═══════════════════════════════════════════
+             HERO
+        ═══════════════════════════════════════════ -->
+        <section class="hero" id="hero">
+            <div class="hero__inner container">
+                <div class="hero__text">
+                    <h1 class="hero__title">Automatizzo ciò che ti rallenta.<br> Tu pensi al tuo lavoro.</h1>
+                    <p class="hero__subtitle">Costruisco siti web, web app e strumenti digitali su misura per professionisti e piccole imprese che vogliono lavorare meglio — non di più.</p>
+                    <div class="hero__actions">
+                        <a href="#contatti" class="btn btn--primary">Parliamo del tuo progetto</a>
+                        <a href="#progetti" class="btn btn--outline">Guarda i progetti</a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <div class="hero__photo-frame">
+                        <img src="assets/img/andrea.png" alt="Andrea Pompili" loading="eager">
+                    </div>
+                </div>
+            </div>
+            <div class="hero__scroll-hint" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════
+             CHI SONO
+        ═══════════════════════════════════════════ -->
+        <section class="section section--cream" id="chi-sono">
+            <div class="container">
+                <div class="section__label reveal">Chi sono</div>
+                <div class="about">
+                    <div class="about__text reveal">
+                        <h2>Sviluppo quello che ti serve, niente di più.</h2>
+                        <p>Vengo dal mondo IT — analisi dati, infrastrutture, sistemi. Ho passato anni a capire come funzionano le cose sotto il cofano, dal server casalingo alla rete aziendale. Oggi uso quell'esperienza per costruire strumenti digitali che funzionano davvero.</p>
+                        <p>Non parto da un template e non vendo pacchetti preconfezionati. Studio il tuo caso, valuto le opzioni, testo le soluzioni e ti consegno qualcosa che si adatta a come lavori tu — non il contrario.</p>
+                        <p>Sviluppo siti web, web app, PWA installabili, gestionali e sistemi di prenotazione. Quando ha senso, integro strumenti di intelligenza artificiale — come chatbot o automazioni — per semplificare processi che altrimenti richiederebbero tempo e attenzione manuali.</p>
+                        <p>Lo stack che uso (Supabase, GitHub Pages, Brevo) è moderno e affidabile: i tuoi dati sono sempre al sicuro con backup disponibili, e gli strumenti che costruisco sono pensati per durare.</p>
+                    </div>
+                    <div class="about__highlights reveal">
+                        <div class="highlight-card">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            <h3>Sviluppo su misura</h3>
+                            <p>Siti, web app, PWA — ogni progetto è costruito da zero sulle tue esigenze</p>
+                        </div>
+                        <div class="highlight-card">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                            <h3>Automazione reale</h3>
+                            <p>Le attività ripetitive le fa il software — tu ti concentri sul tuo lavoro</p>
+                        </div>
+                        <div class="highlight-card">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            <h3>Dati al sicuro</h3>
+                            <p>Backup sempre disponibili, stack affidabile e testato</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════
+             SERVIZI
+        ═══════════════════════════════════════════ -->
+        <section class="section section--light" id="servizi">
+            <div class="container">
+                <div class="section__label reveal">Servizi</div>
+                <h2 class="section__title reveal">Cosa posso fare per te</h2>
+                <p class="section__desc reveal">Ogni progetto parte da un'esigenza concreta. Ecco le aree in cui posso aiutarti.</p>
+                <div class="services-grid">
+
+                    <div class="service-card reveal">
+                        <div class="service-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        </div>
+                        <h3>Siti web e web app su misura</h3>
+                        <p>Dal sito vetrina alla web app complessa. Ogni progetto parte dalle tue esigenze reali, non da un template.</p>
+                        <span class="service-card__benefit">Un prodotto che rispecchia il tuo lavoro e funziona come serve a te.</span>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="service-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                        </div>
+                        <h3>PWA installabili con notifiche push</h3>
+                        <p>App che si installano dal browser, senza passare dagli store. Con notifiche push native per comunicare con i tuoi clienti.</p>
+                        <span class="service-card__benefit">I tuoi clienti ti portano in tasca — senza costi di pubblicazione.</span>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="service-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                        </div>
+                        <h3>Sistemi di prenotazione e gestionali</h3>
+                        <p>Basta messaggi WhatsApp per fissare appuntamenti. Un sistema che gestisce disponibilità, conferme e promemoria al posto tuo.</p>
+                        <span class="service-card__benefit">Ore risparmiate ogni settimana sulla parte amministrativa.</span>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="service-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                        </div>
+                        <h3>Automazione dei processi</h3>
+                        <p>Identifico le attività ripetitive nel tuo lavoro e costruisco strumenti che le fanno per te. Report, notifiche, sincronizzazioni.</p>
+                        <span class="service-card__benefit">Meno lavoro manuale, meno errori, più tempo per quello che conta.</span>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="service-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <h3>Integrazione chatbot AI</h3>
+                        <p>Chatbot intelligenti che rispondono ai tuoi clienti, raccolgono informazioni e smistano richieste. Attivi 24/7.</p>
+                        <span class="service-card__benefit">Un assistente che non dorme, non si ammala e non va in ferie.</span>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="service-card__icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
+                        </div>
+                        <h3>Consulenza IT e analisi dati</h3>
+                        <p>Ti aiuto a capire quali strumenti ti servono davvero, analizzando i tuoi dati e i tuoi processi. Niente soluzioni imposte.</p>
+                        <span class="service-card__benefit">Decisioni basate sui numeri, non sulle sensazioni.</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════
+             PROGETTI
+        ═══════════════════════════════════════════ -->
+        <section class="section section--dark" id="progetti">
+            <div class="container">
+                <div class="section__label reveal">Progetti</div>
+                <h2 class="section__title reveal">Risultati concreti, non promesse.</h2>
+                <p class="section__desc reveal">Ogni progetto nasce da un problema reale e finisce con una soluzione che funziona.</p>
+                <!-- Le card vengono generate da projects.js -->
+                <div class="projects-grid" id="projects-grid"></div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════
+             TECH STACK
+        ═══════════════════════════════════════════ -->
+        <section class="section section--cream stack-section" id="stack">
+            <div class="container">
+                <div class="section__label reveal">Stack tecnologico</div>
+                <p class="stack__desc reveal">Strumenti moderni, affidabili e senza vincoli proprietari.</p>
+                <div class="stack-pills reveal">
+                    <span class="stack-pill">HTML / CSS / JS</span>
+                    <span class="stack-pill">Supabase</span>
+                    <span class="stack-pill">GitHub Pages</span>
+                    <span class="stack-pill">Brevo</span>
+                    <span class="stack-pill">PWA / Service Worker</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════
+             CONTATTI
+        ═══════════════════════════════════════════ -->
+        <section class="section section--accent" id="contatti">
+            <div class="container">
+                <div class="section__label reveal">Contatti</div>
+                <h2 class="section__title reveal">Hai un'idea? Parliamone.</h2>
+                <p class="section__desc reveal">Niente questionari infiniti. Scrivimi due righe su quello che ti serve e ti rispondo entro 24 ore.</p>
+                <div class="contact-grid">
+                    <form class="contact-form reveal" id="contact-form">
+                        <div class="form-group">
+                            <label for="contact-name">Nome</label>
+                            <input type="text" id="contact-name" name="name" required autocomplete="name" placeholder="Come ti chiami?">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" name="email" required autocomplete="email" placeholder="La tua email">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Messaggio</label>
+                            <textarea id="contact-message" name="message" rows="5" required placeholder="Raccontami brevemente di cosa hai bisogno..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full">Invia messaggio</button>
+                        <p class="form-note">Oppure scrivimi direttamente a <a href="mailto:info@andreapompili.it">info@andreapompili.it</a></p>
+                    </form>
+                    <div class="contact-info reveal">
+                        <div class="contact-info__card">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:info@andreapompili.it">info@andreapompili.it</a>
+                            </div>
+                        </div>
+                        <div class="contact-info__card">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            <div>
+                                <strong>LinkedIn</strong>
+                                <a href="https://linkedin.com/in/andreapompili" target="_blank" rel="noopener noreferrer">linkedin.com/in/andreapompili</a>
+                            </div>
+                        </div>
+                        <p class="contact-info__note">Niente formalismi — scrivimi come preferisci.<br>Se hai già un'idea chiara, meglio. Se non ce l'hai, ci ragioniamo insieme.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a href="#hero" class="footer__logo">Andrea<span>Pompili</span></a>
+                <nav class="footer__nav" aria-label="Footer">
+                    <a href="#chi-sono">Chi sono</a>
+                    <a href="#servizi">Servizi</a>
+                    <a href="#progetti">Progetti</a>
+                    <a href="blog/">Blog</a>
+                    <a href="#contatti">Contatti</a>
+                </nav>
+                <p class="footer__copy">&copy; 2026 Andrea Pompili. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/projects.js"></script>
+    <script src="assets/js/blog.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
