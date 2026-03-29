@@ -12,7 +12,6 @@ var projects = [
         url:         'https://thomasbresciani.com',
         image:       'assets/img/projects/thomas-bresciani.png',
         description: 'Web app di gestione prenotazioni per personal trainer. Il cliente gestisce sessioni, disponibilità e clienti senza strumenti esterni. PWA installabile con notifiche push per promemoria e conferme.',
-        stack:       ['HTML/CSS/JS', 'Supabase', 'GitHub Pages', 'Brevo'],
         result:      'Elimina la gestione manuale via messaggi e fogli — risparmio concreto di tempo sulla parte amministrativa.'
     }
     // ── Aggiungi nuovi progetti qui ──
@@ -21,7 +20,6 @@ var projects = [
     //     url:         'https://...',
     //     image:       'assets/img/projects/nome-file.png',  (opzionale)
     //     description: 'Descrizione del progetto...',
-    //     stack:       ['Tech 1', 'Tech 2'],
     //     result:      'Risultato ottenuto...'
     // }
 ];
@@ -36,11 +34,6 @@ var projects = [
 
     var html = '';
     projects.forEach(function (p) {
-        var tags = '';
-        p.stack.forEach(function (tech) {
-            tags += '<span class="project-card__tag">' + tech + '</span>';
-        });
-
         html += '' +
             '<article class="project-card reveal">' +
                 (p.image
@@ -62,7 +55,6 @@ var projects = [
                 '</div>' +
                 '<div class="project-card__body">' +
                     '<p class="project-card__desc">' + p.description + '</p>' +
-                    '<div class="project-card__stack">' + tags + '</div>' +
                     '<p class="project-card__result"><strong>Risultato:</strong> ' + p.result + '</p>' +
                 '</div>' +
             '</article>';

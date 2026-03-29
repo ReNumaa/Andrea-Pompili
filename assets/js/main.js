@@ -106,12 +106,7 @@
 
             if (!name || !email || !message) return;
 
-            /* ──────────────────────────────────────────────────
-               INTEGRAZIONE BREVO (opzionale)
-               Per attivare l'invio tramite Brevo, sostituisci
-               il blocco mailto qui sotto con una fetch verso
-               l'API Brevo o un tuo endpoint server-side.
-               ────────────────────────────────────────────────── */
+            /* Fallback mailto — sostituibile con un endpoint server-side */
 
             var subject = encodeURIComponent('Contatto dal sito — ' + name);
             var body    = encodeURIComponent(
