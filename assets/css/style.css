@@ -375,13 +375,13 @@ p + p { margin-top: var(--space-sm); }
 
 .hero__title {
     font-family: var(--font-display);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.25;
     margin-bottom: var(--space-sm);
 }
 
 .hero__subtitle {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     color: var(--sage-soft);
     max-width: 520px;
     margin: 0 auto var(--space-lg);
@@ -964,7 +964,7 @@ p + p { margin-top: var(--space-sm); }
 
     /* Hero */
     .hero__title {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .hero__photo-frame {
@@ -1079,7 +1079,7 @@ p + p { margin-top: var(--space-sm); }
     }
 
     .hero__title {
-        font-size: 2.4rem;
+        font-size: 2.1rem;
     }
 
     .hero__subtitle {
@@ -1128,7 +1128,7 @@ p + p { margin-top: var(--space-sm); }
    ═══════════════════════════════════════════════════════ */
 @media (min-width: 1280px) {
     .hero__title {
-        font-size: 2.7rem;
+        font-size: 2.35rem;
     }
 
     .section__title,
@@ -1148,7 +1148,7 @@ p + p { margin-top: var(--space-sm); }
    ═══════════════════════════════════════════════════════ */
 @media (max-width: 380px) {
     .hero__title {
-        font-size: 1.35rem;
+        font-size: 1.2rem;
     }
 
     .hero__subtitle {
