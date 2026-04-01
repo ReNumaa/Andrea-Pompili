@@ -106,17 +106,37 @@
 
             if (!name || !email || !message) return;
 
-            /* Fallback mailto — sostituibile con un endpoint server-side */
+            var submitBtn = contactForm.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Invio in corso...';
 
-            var subject = encodeURIComponent('Contatto dal sito — ' + name);
-            var body    = encodeURIComponent(
-                'Nome: ' + name + '\n' +
-                'Email: ' + email + '\n\n' +
-                message
-            );
-            window.location.href = 'mailto:info@andreapompili.it?subject=' + subject + '&body=' + body;
-
-            showFormStatus('Grazie! Si aprirà il tuo client email per inviare il messaggio.', 'success');
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    access_key: 'e6c99299-6268-48d8-9937-2bb806e91eed',
+                    subject: 'Nuovo messaggio dal sito andreapompili.it',
+                    name: name,
+                    email: email,
+                    message: message
+                })
+            })
+            .then(function (res) { return res.json(); })
+            .then(function (data) {
+                if (data.success) {
+                    showFormStatus('Grazie! Il tuo messaggio è stato inviato.', 'success');
+                    contactForm.reset();
+                } else {
+                    showFormStatus('Errore nell\'invio. Riprova o scrivimi su LinkedIn.', 'error');
+                }
+            })
+            .catch(function () {
+                showFormStatus('Errore di connessione. Riprova tra poco.', 'error');
+            })
+            .finally(function () {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Invia messaggio';
+            });
         });
     }
 

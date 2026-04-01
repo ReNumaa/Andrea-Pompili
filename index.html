@@ -237,7 +237,10 @@
                 <h2 class="section__title reveal">Hai un'idea? Parliamone.</h2>
                 <p class="section__desc reveal">Niente questionari infiniti. Scrivimi due righe su quello che ti serve e ti rispondo entro 24 ore.</p>
                 <div class="contact-grid">
-                    <form class="contact-form reveal" id="contact-form">
+                    <form class="contact-form reveal" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="e6c99299-6268-48d8-9937-2bb806e91eed">
+                        <input type="hidden" name="subject" value="Nuovo messaggio dal sito andreapompili.it">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                         <div class="form-group">
                             <label for="contact-name">Nome</label>
                             <input type="text" id="contact-name" name="name" required autocomplete="name" placeholder="Come ti chiami?">
