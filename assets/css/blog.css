@@ -40,11 +40,25 @@
 .blog-card {
     background: #fff;
     border-radius: var(--radius);
-    padding: var(--space-md);
     box-shadow: var(--shadow);
     transition: transform var(--transition), box-shadow var(--transition);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+}
+
+.blog-card__cover {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+}
+
+.blog-card__body {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 .blog-card:hover {
     transform: translateY(-3px);
@@ -102,6 +116,21 @@
 }
 .blog-card__link:hover {
     gap: 0.7rem;
+}
+
+
+/* ─── ARTICLE IMAGES ─── */
+.article-cover {
+    width: 100%;
+    border-radius: var(--radius);
+    margin-bottom: var(--space-lg);
+}
+
+.article-img {
+    width: 100%;
+    border-radius: var(--radius-sm);
+    margin: var(--space-sm) 0 var(--space-md);
+    box-shadow: var(--shadow);
 }
 
 

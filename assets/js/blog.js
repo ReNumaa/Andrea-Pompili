@@ -14,15 +14,40 @@ var articles = [
         category: 'Automazione',
         excerpt:  'Se gestisci appuntamenti via WhatsApp o telefono, stai spendendo tempo su qualcosa che un software può fare meglio di te. Ecco come funziona nella pratica.',
         slug:     'sistema-prenotazione-risparmio-tempo'
+    },
+    {
+        title:    'Zaino in Spalla',
+        date:     '2025-04-14',
+        category: 'Viaggi',
+        excerpt:  'Quest\'anno ho scelto la lentezza e lo zaino in spalla: Interrail in Europa centrale e del Nord e il Cammino degli Dei tra Bologna e Firenze.',
+        slug:     'zaino-in-spalla',
+        cover:    'assets/img/blog/04-Zaino-in-spalla-header.png'
+    },
+    {
+        title:    'Correre: Più di uno Sport, un Viaggio',
+        date:     '2025-03-14',
+        category: 'Sport',
+        excerpt:  'La corsa è molto più di un semplice sport. Per molti è una sfida, un rituale quotidiano, un momento di libertà. Ogni passo ha una storia da raccontare.',
+        slug:     'correre',
+        cover:    'assets/img/blog/03-Correre-header.png'
+    },
+    {
+        title:    'Budgeting',
+        date:     '2025-02-17',
+        category: 'Finanza Personale',
+        excerpt:  'Gestire le proprie finanze personali è fondamentale. Rilevare con precisione entrate e uscite permette di avere una visione chiara della propria situazione economica.',
+        slug:     'budgeting',
+        cover:    'assets/img/blog/02-BUDGETING-header.png'
+    },
+    {
+        title:    'WHY?',
+        date:     '2025-01-14',
+        category: 'Crescita Personale',
+        excerpt:  'Benvenuti! Mi chiamo Andrea Pompili e sono una persona appassionata di crescita personale, tecnologia, finanza, sport e viaggi. Ecco perché ho creato questo blog.',
+        slug:     'why',
+        cover:    'assets/img/blog/01-WHY-header.png'
     }
     // ── Aggiungi nuovi articoli qui ──
-    // {
-    //     title:    'Titolo articolo',
-    //     date:     '2026-04-10',
-    //     category: 'Categoria',
-    //     excerpt:  'Breve descrizione...',
-    //     slug:     'nome-file-senza-html'
-    // }
 ];
 
 
@@ -56,21 +81,32 @@ function formatDate(dateStr) {
     }
 
     var html = '';
+    var isSubfolder = grid.closest('.blog-page');
+    var prefix = isSubfolder ? '' : 'blog/';
+    var imgPrefix = isSubfolder ? '../' : '';
+
     list.forEach(function (a) {
+        var coverHtml = a.cover
+            ? '<img src="' + imgPrefix + a.cover + '" alt="' + a.title + '" class="blog-card__cover" loading="lazy">'
+            : '';
+
         html += '' +
             '<article class="blog-card reveal">' +
-                '<div class="blog-card__meta">' +
-                    '<time datetime="' + a.date + '">' + formatDate(a.date) + '</time>' +
-                    '<span class="blog-card__cat">' + a.category + '</span>' +
+                coverHtml +
+                '<div class="blog-card__body">' +
+                    '<div class="blog-card__meta">' +
+                        '<time datetime="' + a.date + '">' + formatDate(a.date) + '</time>' +
+                        '<span class="blog-card__cat">' + a.category + '</span>' +
+                    '</div>' +
+                    '<h3 class="blog-card__title">' +
+                        '<a href="' + prefix + 'articles/' + a.slug + '.html">' + a.title + '</a>' +
+                    '</h3>' +
+                    '<p class="blog-card__excerpt">' + a.excerpt + '</p>' +
+                    '<a href="' + prefix + 'articles/' + a.slug + '.html" class="blog-card__link">' +
+                        'Leggi tutto' +
+                        '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' +
+                    '</a>' +
                 '</div>' +
-                '<h3 class="blog-card__title">' +
-                    '<a href="' + (grid.closest('.blog-page') ? '' : 'blog/') + 'articles/' + a.slug + '.html">' + a.title + '</a>' +
-                '</h3>' +
-                '<p class="blog-card__excerpt">' + a.excerpt + '</p>' +
-                '<a href="' + (grid.closest('.blog-page') ? '' : 'blog/') + 'articles/' + a.slug + '.html" class="blog-card__link">' +
-                    'Leggi tutto' +
-                    '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' +
-                '</a>' +
             '</article>';
     });
 
