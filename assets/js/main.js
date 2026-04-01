@@ -102,6 +102,7 @@
 
             var name    = document.getElementById('contact-name').value.trim();
             var email   = document.getElementById('contact-email').value.trim();
+            var phone   = document.getElementById('contact-phone').value.trim();
             var message = document.getElementById('contact-message').value.trim();
 
             if (!name || !email || !message) return;
@@ -110,16 +111,19 @@
             submitBtn.disabled = true;
             submitBtn.textContent = 'Invio in corso...';
 
+            var formData = {
+                access_key: 'e6c99299-6268-48d8-9937-2bb806e91eed',
+                subject: 'Nuovo messaggio dal sito andreapompili.it',
+                name: name,
+                email: email,
+                message: message
+            };
+            if (phone) formData.phone = phone;
+
             fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    access_key: 'e6c99299-6268-48d8-9937-2bb806e91eed',
-                    subject: 'Nuovo messaggio dal sito andreapompili.it',
-                    name: name,
-                    email: email,
-                    message: message
-                })
+                body: JSON.stringify(formData)
             })
             .then(function (res) { return res.json(); })
             .then(function (data) {
