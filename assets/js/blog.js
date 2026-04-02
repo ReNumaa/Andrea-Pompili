@@ -9,13 +9,6 @@
 
 var articles = [
     {
-        title:    'Come un sistema di prenotazione ti fa risparmiare ore ogni settimana',
-        date:     '2026-03-20',
-        category: 'Automazione',
-        excerpt:  'Se gestisci appuntamenti via WhatsApp o telefono, stai spendendo tempo su qualcosa che un software può fare meglio di te. Ecco come funziona nella pratica.',
-        slug:     'sistema-prenotazione-risparmio-tempo'
-    },
-    {
         title:    'Zaino in Spalla',
         date:     '2025-04-14',
         category: 'Viaggi',
@@ -86,13 +79,8 @@ function formatDate(dateStr) {
     var imgPrefix = isSubfolder ? '../' : '';
 
     list.forEach(function (a) {
-        var coverHtml = a.cover
-            ? '<img src="' + imgPrefix + a.cover + '" alt="' + a.title + '" class="blog-card__cover" loading="lazy">'
-            : '';
-
         html += '' +
             '<article class="blog-card reveal">' +
-                coverHtml +
                 '<div class="blog-card__body">' +
                     '<div class="blog-card__meta">' +
                         '<time datetime="' + a.date + '">' + formatDate(a.date) + '</time>' +
